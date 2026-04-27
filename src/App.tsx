@@ -2,8 +2,13 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const } }
+  hidden: { opacity: 0, y: 15 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1.0, ease: [0.22, 1, 0.36, 1] as const } }
+};
+
+const fade = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 1.5, ease: "easeOut" } }
 };
 
 const stagger = {
@@ -57,9 +62,9 @@ function Hero() {
           </motion.div>
         </motion.div>
         <motion.div 
-          initial={{ opacity: 0, clipPath: 'inset(10% 10% 10% 10%)' }}
-          animate={{ opacity: 1, clipPath: 'inset(0% 0% 0% 0%)' }}
-          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
+          initial={{ opacity: 0, clipPath: 'inset(5% 5% 5% 5%)', scale: 1.02 }}
+          animate={{ opacity: 1, clipPath: 'inset(0% 0% 0% 0%)', scale: 1 }}
+          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] as const }}
         >
           <img 
             src="https://images.unsplash.com/photo-1475721028070-2051152a4cb8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
