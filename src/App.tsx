@@ -63,7 +63,7 @@ function Hero() {
           transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] as const }}
         >
           <img 
-            src="https://images.unsplash.com/photo-1475721028070-2051152a4cb8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+            src="/hero.png" 
             alt="Minimalist architecture representing structure and order" 
             className="hero-image"
           />
