@@ -6,10 +6,6 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 1.0, ease: [0.22, 1, 0.36, 1] as const } }
 };
 
-const fade = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 1.5, ease: "easeOut" } }
-};
 
 const stagger = {
   hidden: { opacity: 0 },
