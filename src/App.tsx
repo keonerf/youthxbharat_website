@@ -140,22 +140,23 @@ function ModelUNAcademy() {
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} style={{ 
           marginTop: '5rem', 
           padding: '4rem 2rem', 
-          backgroundColor: 'var(--primary)', 
+          backgroundColor: 'var(--surface)', 
           borderRadius: '1rem', 
-          color: '#ffffff',
+          border: '1px solid var(--border)',
+          color: 'var(--text)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           textAlign: 'center',
-          boxShadow: '0 20px 40px rgba(154, 52, 18, 0.15)'
+          boxShadow: '0 10px 30px rgba(0,0,0,0.03)'
         }}>
           <h3 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>Conference Crash Course.</h3>
-          <p style={{ color: 'rgba(255,255,255,0.9)', marginBottom: '2.5rem', maxWidth: '700px', lineHeight: 1.6, fontSize: '1.1rem' }}>
+          <p style={{ color: 'var(--text-light)', marginBottom: '2.5rem', maxWidth: '700px', lineHeight: 1.6, fontSize: '1.1rem' }}>
             Offered to all students a day or two before their conferences. This intensive preparation session ensures delegates are fully equipped, confident, and ready for their upcoming event.
           </p>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4CcZgN46t7rrhL-Y0g0BFb_37k53WvhHuIDzbC2nO0mYzxQ/viewform?usp=pp_url" target="_blank" rel="noreferrer" style={{ 
-            backgroundColor: '#ffffff', 
-            color: 'var(--primary)', 
+            backgroundColor: '#171717', 
+            color: '#ffffff', 
             fontWeight: 700, 
             padding: '1rem 2.5rem', 
             borderRadius: '2rem',
