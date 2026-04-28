@@ -137,12 +137,32 @@ function ModelUNAcademy() {
           </motion.div>
         </div>
 
-        <motion.div className="course-card" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} style={{ marginTop: '4rem' }}>
-          <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem' }}>Conference Crash Course</h3>
-          <p style={{ color: 'var(--text-light)', marginBottom: '2rem', maxWidth: '800px', lineHeight: 1.6 }}>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} style={{ 
+          marginTop: '5rem', 
+          padding: '4rem 2rem', 
+          backgroundColor: 'var(--primary)', 
+          borderRadius: '1rem', 
+          color: '#ffffff',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          textAlign: 'center',
+          boxShadow: '0 20px 40px rgba(154, 52, 18, 0.15)'
+        }}>
+          <h3 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>Conference Crash Course.</h3>
+          <p style={{ color: 'rgba(255,255,255,0.9)', marginBottom: '2.5rem', maxWidth: '700px', lineHeight: 1.6, fontSize: '1.1rem' }}>
             Offered to all students a day or two before their conferences. This intensive preparation session ensures delegates are fully equipped, confident, and ready for their upcoming event.
           </p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4CcZgN46t7rrhL-Y0g0BFb_37k53WvhHuIDzbC2nO0mYzxQ/viewform?usp=pp_url" target="_blank" rel="noreferrer" className="btn btn-secondary">Crash Course Registration Link</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4CcZgN46t7rrhL-Y0g0BFb_37k53WvhHuIDzbC2nO0mYzxQ/viewform?usp=pp_url" target="_blank" rel="noreferrer" style={{ 
+            backgroundColor: '#ffffff', 
+            color: 'var(--primary)', 
+            fontWeight: 700, 
+            padding: '1rem 2.5rem', 
+            borderRadius: '2rem',
+            textDecoration: 'none',
+            transition: 'transform 0.3s ease',
+            display: 'inline-block'
+          }}>Secure Your Spot</a>
         </motion.div>
       </div>
     </section>
