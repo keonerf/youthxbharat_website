@@ -6,7 +6,6 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 1.0, ease: [0.22, 1, 0.36, 1] as const } }
 };
 
-
 const stagger = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
@@ -25,14 +24,13 @@ function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <a href="#" className="logo-container">
-          <img src="/logo.jpeg" alt="YouthXBharat" className="logo-img" />
           <span>YouthXBharat</span>
         </a>
         <ul className="nav-links">
-          <li><a href="#about" className="nav-link">About</a></li>
-          <li><a href="#courses" className="nav-link">Programs</a></li>
-          <li><a href="#hybrid" className="nav-link">Hybrid</a></li>
-          <li><a href="#contact" className="nav-link">Contact</a></li>
+          <li><a href="#conference" className="nav-link">Conference Management</a></li>
+          <li><a href="#academy" className="nav-link">Model UN Academy</a></li>
+          <li><a href="#events" className="nav-link">Events</a></li>
+          <li><a href="#team" className="nav-link">Our Team</a></li>
         </ul>
       </div>
     </nav>
@@ -41,62 +39,51 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section className="hero">
-      <div className="container hero-grid">
-        <motion.div className="hero-content" variants={stagger} initial="hidden" animate="visible">
-          <motion.span className="kicker" variants={fadeUp}>Model United Nations Academy</motion.span>
-          <motion.h1 className="title-display" variants={fadeUp}>
-            Master the art of <br />
-            <em>deliberation.</em>
+    <section className="hero" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', background: 'radial-gradient(circle at center, rgba(154, 52, 18, 0.04) 0%, transparent 60%)' }}>
+      <div className="container">
+        <motion.div className="hero-content" style={{ margin: '0 auto', maxWidth: '1200px' }} variants={stagger} initial="hidden" animate="visible">
+          <motion.span className="kicker" variants={fadeUp}>Empowering the next generation</motion.span>
+          <motion.h1 className="title-display" variants={fadeUp} style={{ lineHeight: 1.2 }}>
+            <span style={{ whiteSpace: 'nowrap', fontWeight: 800, display: 'block', marginBottom: '1.25rem' }}>Shaping global leaders through</span>
+            <em className="cursor-animate" style={{ fontWeight: 800 }}>deliberation & discourse.</em>
           </motion.h1>
-          <motion.p className="subtitle" variants={fadeUp}>
-            A sophisticated curriculum designed to build unshakeable confidence, refined stage presence, and global awareness for the next generation of leaders.
+          <motion.p className="subtitle" variants={fadeUp} style={{ margin: '0 auto 3rem auto', maxWidth: '800px' }}>
+            A sophisticated platform combining premier conference management with elite Model UN training to build unshakeable confidence and global awareness.
           </motion.p>
-          <motion.div className="hero-actions" variants={fadeUp}>
-            <a href="#courses" className="btn btn-primary">Discover Programs</a>
-            <a href="#about" className="btn btn-secondary">Our Philosophy</a>
+          <motion.div className="hero-actions" variants={fadeUp} style={{ justifyContent: 'center' }}>
+            <a href="#academy" className="btn btn-primary">Join the Academy</a>
+            <a href="#conference" className="btn btn-secondary">Explore Management</a>
           </motion.div>
-        </motion.div>
-        <motion.div 
-          initial={{ opacity: 0, clipPath: 'inset(5% 5% 5% 5%)', scale: 1.02 }}
-          animate={{ opacity: 1, clipPath: 'inset(0% 0% 0% 0%)', scale: 1 }}
-          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] as const }}
-        >
-          <img 
-            src="/hero.png" 
-            alt="Minimalist architecture representing structure and order" 
-            className="hero-image"
-          />
         </motion.div>
       </div>
     </section>
   );
 }
 
-function About() {
+function ConferenceManagement() {
   return (
-    <section id="about" className="section">
+    <section id="conference" className="section">
       <div className="container about-grid">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}>
-          <span className="kicker">Why YouthXBharat</span>
-          <h2 className="title-section">Elevating potential.</h2>
+          <span className="kicker">Services</span>
+          <h2 className="title-section">Conference Management.</h2>
           <p className="about-text" style={{ marginTop: '2rem' }}>
-            We believe that true leadership begins with the ability to articulate thought. Our methodology strips away the fear of public speaking, replacing it with a structured, confident approach to global discourse.
+            Delivering seamless, high-end organizational experiences. From conceptualization to execution, we ensure every conference runs with absolute precision and professionalism.
           </p>
         </motion.div>
         
         <motion.div className="features-list" initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={stagger}>
           <motion.div className="feature-item" variants={fadeUp}>
-            <h3>Public Speaking</h3>
-            <p>Develop a commanding stage presence that captures any audience through refined vocal techniques and body language.</p>
+            <h3>End-to-End Execution</h3>
+            <p>Comprehensive logistical planning, vendor management, and on-site coordination to guarantee a flawless event experience.</p>
           </motion.div>
           <motion.div className="feature-item" variants={fadeUp}>
-            <h3>Confidence Architecture</h3>
-            <p>Build unshakeable confidence systematically through mock sessions, debate frameworks, and highly personalized feedback.</p>
+            <h3>Executive Board Curation</h3>
+            <p>Sourcing and integrating experienced, highly qualified Executive Board members to elevate the quality of debate.</p>
           </motion.div>
           <motion.div className="feature-item" variants={fadeUp}>
-            <h3>Persuasion & Deliberation</h3>
-            <p>Master the subtle art of negotiation, global topic analysis, and convincing deliberation in high-stakes environments.</p>
+            <h3>Strategic Marketing</h3>
+            <p>Targeted outreach and branding strategies to maximize delegate turnout and institutional prestige.</p>
           </motion.div>
         </motion.div>
       </div>
@@ -104,14 +91,16 @@ function About() {
   );
 }
 
-function Courses() {
+function ModelUNAcademy() {
   return (
-    <section id="courses" className="section" style={{ backgroundColor: '#ffffff' }}>
+    <section id="academy" className="section">
       <div className="container">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} style={{ textAlign: 'center' }}>
-          <span className="kicker">Curriculum</span>
-          <h2 className="title-section">Academic Programs</h2>
-          <p className="subtitle" style={{ margin: '0 auto' }}>Tailored frameworks designed for precision and excellence.</p>
+          <span className="kicker">Education</span>
+          <h2 className="title-section">Model UN Academy</h2>
+          <p className="subtitle" style={{ margin: '0 auto' }}>
+            In collaboration with <strong>Vineeta Malani Classes</strong>
+          </p>
         </motion.div>
 
         <div className="courses-container">
@@ -120,13 +109,14 @@ function Courses() {
               <span className="course-badge">Foundation // 4th—7th Standard</span>
               <h3 style={{ marginTop: '1rem' }}>Beginner Form</h3>
             </div>
-            <ul className="course-features">
+            <ul className="course-features" style={{ marginBottom: '3rem' }}>
               <li>Building confidence from the ground up</li>
               <li>Fundamentals of stage presence and speech</li>
               <li>Introduction to global geopolitical topics</li>
               <li>Core mechanisms of Model United Nations</li>
               <li>Evaluative mock sessions with personal critique</li>
             </ul>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTYNtn5VeKgOD7sQbmWOZqHVaP5NCsIYhqnswoGOWVV37MHg/viewform?usp=pp_url" target="_blank" rel="noreferrer" className="btn btn-primary" style={{ width: '100%' }}>Academy Registration Link</a>
           </motion.div>
 
           <motion.div className="course-card" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
@@ -134,50 +124,106 @@ function Courses() {
               <span className="course-badge">Advanced // 8th Standard +</span>
               <h3 style={{ marginTop: '1rem' }}>Intermediate Form</h3>
             </div>
-            <ul className="course-features">
+            <ul className="course-features" style={{ marginBottom: '3rem' }}>
               <li>Advanced debate strategy and technique</li>
               <li>In-depth geopolitical research methodologies</li>
               <li>Mastery of committee rules of procedure</li>
               <li>Complex documentation and resolution drafting</li>
               <li>Comprehensive competitive conference preparation</li>
             </ul>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTYNtn5VeKgOD7sQbmWOZqHVaP5NCsIYhqnswoGOWVV37MHg/viewform?usp=pp_url" target="_blank" rel="noreferrer" className="btn btn-primary" style={{ width: '100%' }}>Academy Registration Link</a>
           </motion.div>
         </div>
+
+        <motion.div className="course-card" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} style={{ marginTop: '4rem' }}>
+          <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem' }}>Conference Crash Course</h3>
+          <p style={{ color: 'var(--text-light)', marginBottom: '2rem', maxWidth: '800px', lineHeight: 1.6 }}>
+            Offered to all students a day or two before their conferences. This intensive preparation session ensures delegates are fully equipped, confident, and ready for their upcoming event.
+          </p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4CcZgN46t7rrhL-Y0g0BFb_37k53WvhHuIDzbC2nO0mYzxQ/viewform?usp=pp_url" target="_blank" rel="noreferrer" className="btn btn-secondary">Crash Course Registration Link</a>
+        </motion.div>
       </div>
     </section>
   );
 }
 
-function HybridProgram() {
+function Events() {
   return (
-    <section id="hybrid" className="hybrid-banner">
+    <section id="events" className="section">
       <div className="container">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-          <span className="kicker" style={{ color: '#ffffff' }}>The Next Level</span>
-          <h2 className="title-section">Hybrid Training Environment</h2>
-          <p className="subtitle">
-            A flexible, intensive methodology bridging online pace with in-person immersion.
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <span className="kicker">What We Have Done</span>
+          <h2 className="title-section">Past Events & Milestones</h2>
+          <p className="subtitle" style={{ margin: '0 auto' }}>
+            A legacy of excellence in hosting, managing, and inspiring through high-caliber conferences.
           </p>
         </motion.div>
         
-        <motion.div className="hybrid-grid" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
-          <motion.div className="hybrid-stat" variants={fadeUp}>
-            <h4>Intra MUN Conference</h4>
-            <p>Real-time, high-stakes exposure to apply learned strategies.</p>
+        <motion.div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+          <motion.div className="course-card" variants={fadeUp}>
+            <h4 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '1rem' }}>Flagship Conferences</h4>
+            <p style={{ color: 'var(--text-light)' }}>Successfully hosted multiple large-scale Model UN conferences with delegates from across the region.</p>
           </motion.div>
-          <motion.div className="hybrid-stat" variants={fadeUp}>
-            <h4>Executive Board</h4>
-            <p>Guidance from highly experienced, seasoned professionals.</p>
+          <motion.div className="course-card" variants={fadeUp}>
+            <h4 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '1rem' }}>Institutional Collaborations</h4>
+            <p style={{ color: 'var(--text-light)' }}>Partnered with prestigious educational institutions to elevate their debate and discourse platforms.</p>
           </motion.div>
-          <motion.div className="hybrid-stat" variants={fadeUp}>
-            <h4>Agenda Documentation</h4>
-            <p>Build robust understanding of drafting and committee strategy.</p>
+          <motion.div className="course-card" variants={fadeUp}>
+            <h4 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '1rem' }}>Training Workshops</h4>
+            <p style={{ color: 'var(--text-light)' }}>Conducted intensive public speaking and research workshops impacting hundreds of emerging leaders.</p>
           </motion.div>
-          <motion.div className="hybrid-stat" variants={fadeUp}>
-            <h4>Personalized Critique</h4>
-            <p>Detailed performance analytics, feedback, and tangible recognition.</p>
+          <motion.div className="course-card" variants={fadeUp}>
+            <h4 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '1rem' }}>Global Discourse</h4>
+            <p style={{ color: 'var(--text-light)' }}>Facilitated discussions on critical global agendas, resulting in highly detailed student resolutions.</p>
           </motion.div>
         </motion.div>
+      </div>
+    </section>
+  );
+}
+
+function Team() {
+  return (
+    <section id="team" className="section">
+      <div className="container">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} style={{ textAlign: 'center', marginBottom: '5rem' }}>
+          <span className="kicker">Leadership</span>
+          <h2 className="title-section">The YouthXBharat Team</h2>
+          <p className="subtitle" style={{ margin: '0 auto' }}>Dedicated professionals shaping the future of global discourse.</p>
+        </motion.div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem' }}>
+          
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} style={{ textAlign: 'center' }}>
+            <div style={{ width: '130px', height: '130px', margin: '0 auto 1.5rem auto', borderRadius: '50%', overflow: 'hidden', border: '1px solid var(--border)' }}>
+              <img src="/shivika.jpeg" alt="Shivika Pandey" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 10%', transform: 'scale(1.05)' }} />
+            </div>
+            <h4 style={{ fontSize: '1.25rem', fontWeight: 600 }}>Shivika Pandey</h4>
+            <p style={{ color: 'var(--text-light)', fontSize: '0.9rem', marginTop: '0.25rem' }}>Chief Marketing Officer</p>
+          </motion.div>
+
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} style={{ textAlign: 'center' }}>
+            <div style={{ width: '130px', height: '130px', margin: '0 auto 1.5rem auto', borderRadius: '50%', overflow: 'hidden', border: '1px solid var(--border)' }}>
+              <img src="/arihant.jpeg" alt="Arihant" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', transform: 'scale(1.4)' }} />
+            </div>
+            <h4 style={{ fontSize: '1.25rem', fontWeight: 600 }}>Arihant</h4>
+            <p style={{ color: 'var(--text-light)', fontSize: '0.9rem', marginTop: '0.25rem' }}>Chief Operating Officer</p>
+          </motion.div>
+
+          {/* Blank spaces for other team members */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} style={{ textAlign: 'center' }}>
+            <div style={{ width: '130px', height: '130px', backgroundColor: 'var(--background)', borderRadius: '50%', margin: '0 auto 1.5rem auto', border: '1px solid var(--border)' }}></div>
+            <h4 style={{ fontSize: '1.25rem', fontWeight: 600 }}>&nbsp;</h4>
+            <p style={{ color: 'var(--text-light)', fontSize: '0.9rem', marginTop: '0.25rem' }}>&nbsp;</p>
+          </motion.div>
+
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} style={{ textAlign: 'center' }}>
+            <div style={{ width: '130px', height: '130px', backgroundColor: 'var(--background)', borderRadius: '50%', margin: '0 auto 1.5rem auto', border: '1px solid var(--border)' }}></div>
+            <h4 style={{ fontSize: '1.25rem', fontWeight: 600 }}>&nbsp;</h4>
+            <p style={{ color: 'var(--text-light)', fontSize: '0.9rem', marginTop: '0.25rem' }}>&nbsp;</p>
+          </motion.div>
+
+        </div>
       </div>
     </section>
   );
@@ -189,18 +235,16 @@ function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <h2>
-              <img src="/logo.jpeg" alt="Logo" style={{ height: '24px', borderRadius: '2px', filter: 'grayscale(100%)' }} />
-              YouthXBharat
-            </h2>
+            <h2>YouthXBharat</h2>
             <p>Structuring thought. Empowering voices. Cultivating the leaders of tomorrow.</p>
           </div>
           <div className="footer-links">
             <h4>Index</h4>
             <ul>
-              <li><a href="#about">Philosophy</a></li>
-              <li><a href="#courses">Academic Programs</a></li>
-              <li><a href="#hybrid">Hybrid Environment</a></li>
+              <li><a href="#conference">Conference Management</a></li>
+              <li><a href="#academy">Model UN Academy</a></li>
+              <li><a href="#events">Past Events</a></li>
+              <li><a href="#team">Our Team</a></li>
             </ul>
           </div>
           <div className="footer-links">
@@ -214,7 +258,6 @@ function Footer() {
         </div>
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} YouthXBharat. All rights reserved.</p>
-          <p>Design Language: Minimal</p>
         </div>
       </div>
     </footer>
@@ -227,10 +270,10 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <div className="divider" />
-        <About />
-        <Courses />
-        <HybridProgram />
+        <ConferenceManagement />
+        <ModelUNAcademy />
+        <Events />
+        <Team />
       </main>
       <Footer />
     </>

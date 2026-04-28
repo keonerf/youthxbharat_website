@@ -385,7 +385,7 @@ button {
 /* Footer */
 .footer {
   padding: 6rem 0 3rem 0;
-  background: var(--background);
+  background: #f3f2ec;
 }
 
 .footer-grid {
@@ -438,7 +438,21 @@ button {
   border-top: 1px solid var(--border);
   padding-top: 2rem;
   color: var(--text-light);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+}
+
+.cursor-animate {
+  font-style: italic;
+  display: inline-block;
+  transition: all 0.4s ease;
+  position: relative;
+  cursor: crosshair;
+}
+
+.cursor-animate:hover {
+  color: var(--primary);
+  transform: scale(1.03) rotate(-1deg);
+  text-shadow: 0 10px 30px rgba(154, 52, 18, 0.2);
 }
 
 @media (max-width: 1024px) {
