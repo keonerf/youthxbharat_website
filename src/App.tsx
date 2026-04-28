@@ -102,7 +102,7 @@ function ModelUNAcademy() {
           <p className="subtitle" style={{ margin: '0 auto 1.5rem auto' }}>
             In collaboration with <strong>Vineeta Malani Classes</strong>
           </p>
-          <img src="/vmc_logo.png" alt="Vineeta Malani Classes" style={{ height: '60px', objectFit: 'contain' }} />
+          <img src="/vmc_logo.png" alt="Vineeta Malani Classes" style={{ height: '140px', objectFit: 'contain' }} />
         </motion.div>
 
         <div className="courses-container">
