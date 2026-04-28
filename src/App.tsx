@@ -221,7 +221,7 @@ function Team() {
             <div style={{ width: '130px', height: '130px', margin: '0 auto 1.5rem auto', borderRadius: '50%', overflow: 'hidden', border: '1px solid var(--border)' }}>
               <img src="/shivika.jpeg" alt="Shivika Pandey" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 10%', transform: 'scale(1.05)' }} />
             </div>
-            <h4 style={{ fontSize: '1.25rem', fontWeight: 600 }}>Shivika Pandey</h4>
+            <h4 className="cursor-animate" style={{ fontSize: '1.25rem', fontWeight: 600, fontStyle: 'normal' }}>Shivika Pandey</h4>
             <p style={{ color: 'var(--text-light)', fontSize: '0.9rem', marginTop: '0.25rem' }}>Chief Marketing Officer</p>
           </motion.div>
 
@@ -229,7 +229,7 @@ function Team() {
             <div style={{ width: '130px', height: '130px', margin: '0 auto 1.5rem auto', borderRadius: '50%', overflow: 'hidden', border: '1px solid var(--border)' }}>
               <img src="/arihant.jpeg" alt="Arihant" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', transform: 'scale(1.4)' }} />
             </div>
-            <h4 style={{ fontSize: '1.25rem', fontWeight: 600 }}>Arihant</h4>
+            <h4 className="cursor-animate" style={{ fontSize: '1.25rem', fontWeight: 600, fontStyle: 'normal' }}>Arihant</h4>
             <p style={{ color: 'var(--text-light)', fontSize: '0.9rem', marginTop: '0.25rem' }}>Chief Operating Officer</p>
           </motion.div>
 
