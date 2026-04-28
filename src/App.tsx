@@ -23,8 +23,9 @@ function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <a href="#" className="logo-container">
-          <span>YouthXBharat</span>
+        <a href="#" className="logo-container" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', color: 'var(--text)' }}>
+          <img src="/youthxbharat_logo.jpeg" alt="YouthXBharat Logo" style={{ height: '36px', width: '36px', borderRadius: '50%', objectFit: 'cover' }} />
+          <span style={{ fontWeight: 700, fontSize: '1.25rem' }}>YouthXBharat</span>
         </a>
         <ul className="nav-links">
           <li><a href="#conference" className="nav-link">Conference Management</a></li>
@@ -95,12 +96,13 @@ function ModelUNAcademy() {
   return (
     <section id="academy" className="section">
       <div className="container">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} style={{ textAlign: 'center' }}>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <span className="kicker">Education</span>
           <h2 className="title-section">Model UN Academy</h2>
-          <p className="subtitle" style={{ margin: '0 auto' }}>
+          <p className="subtitle" style={{ margin: '0 auto 1.5rem auto' }}>
             In collaboration with <strong>Vineeta Malani Classes</strong>
           </p>
+          <img src="/vmc_logo.png" alt="Vineeta Malani Classes" style={{ height: '60px', objectFit: 'contain' }} />
         </motion.div>
 
         <div className="courses-container">
